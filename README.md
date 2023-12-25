@@ -1,27 +1,27 @@
 # Movie Recommendation Algorithm using Machine Learning.
 
-This project is a movie recommendation system using Non negative regularized matrix factorization without using any Machine Learning libraries on movie lens dataset.
+This is a movie recommendation system using Non-Negative Regularized Matrix Factorization.
 
-1.  In a recommendation system such as Netflix and Prime Video, there is a group of users and a set of items (movies for the above two systems). Given that each users have rated some items in the system, we would like to predict how the users would rate the items that they have not yet rated, such that we can make recommendations to the users.
+1.  In a recommendation system such as Netflix and Prime Video, there is a group of users and a set of items (movies for the above two systems). Given that each user has rated some items in the system, we would like to predict how the users would rate the items they have not yet rated so that we can make recommendations to the users.
 
-2.  I implmented Regularized Matrix factorization based on the following :
+2.  I implemented Regularized Matrix factorization based on the following :
 
-    1. Movie Lens dataset, describes 5-star rating. It contains 21,000,000 ratings and 510,000 tag applications applied to 30,000 movies by 230,000 users.
-    2. Ratings.csv file is the rating file. Each line of this file after the header row represents one rating of one movie by one user, and has the following format: userId,movieId,rating,timestamp
-    3. Movie information is contained in the file movies.csv. Each line of this file after the header row represents one movie, and has the following format: movieId,title,genres
+    1. Movie Lens dataset, describes a 5-star rating. It contains 21,000,000 ratings and 510,000 tag applications applied to 30,000 movies by 230,000 users.
+    2. Ratings.csv file is the rating file. Each line of this file after the header row represents one rating of one movie by one user and has the following format: userId, movieId, rating, and timestamps.
+    3. Movie information is contained in the file movies.csv. Each line of this file after the header row represents one movie and has the following format: movieId, title, genres.
 
-3.  MatrixFactorization.py codes implementes the regularized matrix factorization model(Gradient Descent) without using any Machine Learning libraries and saves it as a file, which can then used to perform recommendation. I used the below parameter values:
+3.  MatrixFactorization.py codes implement the regularized matrix factorization model(Gradient Descent) without using any Machine Learning libraries and save it as a file, which can then be used to perform recommendations. I used the below parameter values:
 
-    1. steps : the maximum number of steps to perform the optimisation was set to 5000
-    2. alpha : the learning rate was set to 0.0002
-    3. beta : the regularization parameter was set to 0.02
-    4. k : hidden latent features was set to 8
+    1. steps: the maximum number of steps to perform the optimization was set to 5000
+    2. alpha: the learning rate was set to 0.0002
+    3. beta: the regularization parameter was set to 0.02
+    4. k: hidden latent features were set to 8
 
-4.  Recommend.py takes in users as a input and recommends top 25 movies out of his/her unrated movies if the predicted rating for these movies is greater than 3.5 as ideally we want to recommend only good movies
+4.  Recommend.py takes in users as input and recommends the top 25 movies out of his/her unrated movies if the predicted rating for these movies is greater than 3.5 as ideally we want to recommend only good movies
 
 5.  Results for users 1 to 5 as follows:
 
-            Top 25 movies recommendation for the "User 1"
+            Top 25 movie recommendations for the "User 1"
 
                 Killer's Kiss (1955)
                 Liberty Heights (1999)
@@ -50,7 +50,7 @@ This project is a movie recommendation system using Non negative regularized mat
                 City of Angels (1998)
 
 
-            Top 25 movies recommendation for the "User 2"
+            Top 25 movie recommendations for the "User 2"
 
                 9 (2009)
                 Pet Sematary (1989)
@@ -79,7 +79,7 @@ This project is a movie recommendation system using Non negative regularized mat
                 Not Another Teen Movie (2001)
 
 
-            Top 25 movies recommendation for the "User 3"
+            Top 25 movie recommendations for the "User 3"
 
                 Killer's Kiss (1955)
                 My Life as a Dog (Mitt liv som hund) (1985)
@@ -108,7 +108,7 @@ This project is a movie recommendation system using Non negative regularized mat
                 In the Heat of the Night (1967)
 
 
-            Top 25 movies recommendation for the "User 4"
+            Top 25 movie recommendations for the "User 4"
 
                 Pet Sematary (1989)
                 9 (2009)
@@ -137,7 +137,7 @@ This project is a movie recommendation system using Non negative regularized mat
                 Ichi the Killer (Koroshiya 1) (2001)
 
 
-            Top 25 movies recommendation for the "User 5"
+            Top 25 movie recommendations for the "User 5"
 
                 Pet Sematary (1989)
                 Angel at My Table  An (1990)
