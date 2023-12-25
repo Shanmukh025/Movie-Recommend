@@ -1,4 +1,4 @@
-# Movie Recommendation System using Machine Learning.
+# Movie Recommendation Algorithm using Machine Learning.
 
 This project is a movie recommendation system using Non negative regularized matrix factorization without using any Machine Learning libraries on movie lens dataset.
 
